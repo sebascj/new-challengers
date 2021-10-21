@@ -14,7 +14,9 @@ const CardsContainer = styled.div`
 function Products() {
   const [items, setItems] = useState([]);
   const onSearch = (searchResults) => {
-    setItems(searchResults.results);
+    if (Array.isArray(searchResults.results)) {
+      setItems(searchResults.results);
+    }
   };
 
   return (
