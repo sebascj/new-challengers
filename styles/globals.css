@@ -14,3 +14,78 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  /* Palette WIP */
+  /* --raisin-black: #28262cff; */
+  /* --light-slate-gray: #77878bff; */
+  --orange-yellow: #f3b61f;
+  --orange-pantone: #f75c02;
+  --medium-candy-apple-red: #db162fff;
+
+  --orange-100: #f5604c;
+  --orange-200: #ed523e;
+  --orange-300: #ff3a22;
+  --orange-400: #d6260f;
+  --orange-500: #fc2408;
+
+  --theme-red: #ff3a22;
+  --theme-blue: #57a995;
+
+  /* Gray */
+  --background-gray: #1d1d1d;
+  --background-gray-light: #2b2b2b;
+  --text-gray: #303030;
+  --dark-gray: #a9a9a9;
+  --silver-gray: #c0c0c0;
+  --silver-gray-light: #e8e8e8;
+  --neumorph-gray: #e0e0e0;
+
+  /* White */
+  --white: #f8f8f8;
+}
+
+html,
+body,
+div#__next,
+div#__next > div {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  min-width: 320px;
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  background-color: var(--white);
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../src/fonts/SourceSansPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hind Vadodara";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/fonts/HindVadodara-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../src/fonts/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "WebIcon";
+  src: url("../src/fonts/sc-webfonts.ttf") format("truetype"),
+    url("../src/fonts/sc-webfonts.woff") format("woff"),
+    url("../src/fonts/sc-webfonts.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
