@@ -1,18 +1,37 @@
-function Search() {
-  const search = async (data) => {
+import { useState } from "react";
+
+function Search({ onSearch }) {
+  const [query, setQuery] = useState("");
+  const search = async (query) => {
     try {
-      await fetch("/.netlify/functions/search", {
+      const searchResult = await fetch("/.netlify/functions/search", {
         method: "POST",
-        body: JSON.stringify({ query: "cats" }),
+        body: JSON.stringify({ query: query }),
       });
+      const data = await searchResult.json();
+      if (onSearch) {
+        onSearch(data);
+      }
     } catch (error) {
       console.error(error);
     }
   };
   return (
     <div>
-      <input type="text" value="something"></input>
-      <button onClick={search}>search</button>
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => {
+          setQuery(e.target.value);
+        }}
+      ></input>
+      <button
+        onClick={() => {
+          search(query);
+        }}
+      >
+        search
+      </button>
     </div>
   );
 }

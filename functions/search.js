@@ -2,7 +2,7 @@ const https = require("https");
 const getRequest = function (query) {
   return new Promise((resolve, reject) => {
     const SPLASH_API_KEY = process.env.SPLASH_API_KEY;
-    const url = `https://api.unsplash.com/search/photos?query=${query}&client_id=${SPLASH_API_KEY}`;
+    const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=20&client_id=${SPLASH_API_KEY}`;
     https.get(url, (resp) => {
       let rawData = "";
       resp
@@ -11,7 +11,7 @@ const getRequest = function (query) {
         })
         .on("end", () => {
           const body = JSON.parse(rawData);
-          resolve({ data: body });
+          resolve(body);
         })
         .on("error", (e) => {
           reject(e);
