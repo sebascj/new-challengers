@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../src/components/layout/layout";
+import Search from "../src/components/search/Search";
 
 function Products() {
   return (
@@ -7,7 +8,9 @@ function Products() {
       <Head>
         <title>Products | New Challengers</title>
       </Head>
-      <Layout></Layout>
+      <Layout>
+        <Search />
+      </Layout>
     </>
   );
 }
