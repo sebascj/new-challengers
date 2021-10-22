@@ -3,7 +3,7 @@ const SPLASH_API_KEY = process.env.SPLASH_API_KEY;
 
 const getDetails = function (id) {
   return new Promise((resolve, reject) => {
-    const url = `https://api.unsplash.com/photos/${id}?client_id=${SPLASH_API_KEY}`;
+    const url = `https://api.unsplash.com/photos/${id}?client_id=${SPLASH_API_KEY}&content_filter=high`;
     https.get(url, (resp) => {
       let rawData = "";
       resp
@@ -23,7 +23,7 @@ const getDetails = function (id) {
 
 const getList = function (query) {
   return new Promise((resolve, reject) => {
-    const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=20&client_id=${SPLASH_API_KEY}`;
+    const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=20&client_id=${SPLASH_API_KEY}&content_filter=high`;
     https.get(url, (resp) => {
       let rawData = "";
       resp

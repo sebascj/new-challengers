@@ -40,7 +40,7 @@ function Search({ category, onSearch }) {
       <SearchInput
         type="text"
         value={query}
-        placeholder="Hey There! Search for Robots, Computers, Video Games..."
+        placeholder="Hey There! Search for Computers, Games, Virtual Reality..."
         onChange={(e) => {
           setQuery(e.target.value);
         }}

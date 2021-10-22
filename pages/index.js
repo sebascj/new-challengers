@@ -59,8 +59,9 @@ export default function Home() {
             Hello,
             <br /> We are New Challengers Store
           </Title>
-          <SubtitleMobile>Type something.</SubtitleMobile>
-          <div>{"<search bar here>"}</div>
+          <SubtitleMobile>
+            Technology is the present and future of our generations.
+          </SubtitleMobile>
         </Content>
       </Layout>
     </>
