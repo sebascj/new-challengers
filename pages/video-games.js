@@ -9,6 +9,7 @@ const CardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-image: url("https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyNTM3ODR8MHwxfGFsbHx8fHx8fHx8fDE2MzQ4NzMzMDc&ixlib=rb-1.2.1&q=85");
 `;
 
 function VideoGames() {

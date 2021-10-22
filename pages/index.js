@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Layout from "../src/components/layout/layout";
 import { Title, Subtitle } from "../src/components/text/Text";
-import Link from "next/link";
 
 import styled from "styled-components";
 
@@ -19,32 +18,14 @@ const Content = styled.div`
     padding-bottom: 0;
   }
 `;
+
+const Background = styled.div`
+  background-image: url("https://images.unsplash.com/photo-1617802690992-15d93263d3a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNTM3ODR8MHwxfGFsbHx8fHx8fHx8fDE2MzQ4NzY2NTU&ixlib=rb-1.2.1&q=80&w=1080");
+  background-size: cover;
+`;
 const SubtitleMobile = styled(Subtitle)`
   @media (max-width: 900px) {
     text-align: center;
-  }
-`;
-const Contact = styled.div`
-  border: 1px solid var(--theme-red);
-  text-align: center;
-  width: 220px;
-  height: 50px;
-  a {
-    display: block;
-    font-family: "Hind Vadodara";
-    background: none;
-    color: var(--theme-red);
-    line-height: 50px;
-    text-decoration: none;
-
-    &:visited {
-      color: var(--theme-red);
-    }
-    &:hover {
-      background-color: var(--theme-red);
-      color: var(--white);
-      transition: 0.3s ease-out all;
-    }
   }
 `;
 export default function Home() {
@@ -53,17 +34,19 @@ export default function Home() {
       <Head>
         <title>Home | Sebastian</title>
       </Head>
-      <Layout>
-        <Content>
-          <Title>
-            Hello,
-            <br /> We are New Challengers Store
-          </Title>
-          <SubtitleMobile>
-            Technology is the present and future of our generations.
-          </SubtitleMobile>
-        </Content>
-      </Layout>
+      <Background>
+        <Layout>
+          <Content>
+            <Title>
+              Hello,
+              <br /> We are New Challengers Store
+            </Title>
+            <SubtitleMobile>
+              Technology is the present and future of our generations.
+            </SubtitleMobile>
+          </Content>
+        </Layout>
+      </Background>
     </>
   );
 }

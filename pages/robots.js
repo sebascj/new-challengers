@@ -9,6 +9,7 @@ const CardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-image: url("https://images.unsplash.com/photo-1546776230-bb86256870ce?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyNTM3ODR8MHwxfGFsbHx8fHx8fHx8fDE2MzQ4NzM4Mjc&ixlib=rb-1.2.1&q=85");
 `;
 
 function Robots() {
