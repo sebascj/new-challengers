@@ -11,7 +11,7 @@ const CardsContainer = styled.div`
   justify-content: space-between;
 `;
 
-function Products() {
+function Robots() {
   const [items, setItems] = useState([]);
   const onSearch = (searchResults) => {
     if (Array.isArray(searchResults.results)) {
@@ -22,10 +22,10 @@ function Products() {
   return (
     <>
       <Head>
-        <title>Products | New Challengers</title>
+        <title>Robots | New Challengers</title>
       </Head>
       <Layout>
-        <Search category="products" onSearch={onSearch} />
+        <Search category="robots" onSearch={onSearch} />
         <CardsContainer>
           {items.map((item, index) => {
             return <Card key={`card_${index}`} item={item}></Card>;
@@ -35,4 +35,4 @@ function Products() {
     </>
   );
 }
-export default Products;
+export default Robots;

@@ -136,10 +136,46 @@ const Navigation = () => {
           <Link href="/">Home</Link>
         </RouteActive>
       </ListItem>
-      <ListItem>
+      <div></div>
+      {/* <ListItem>
         <RouteActive active={router.pathname === "/products"}>
           <Link href="/products" passHref>
             Products
+          </Link>
+        </RouteActive>
+      </ListItem> */}
+      <ListItem>
+        <RouteActive active={router.pathname === "/virtual-reality"}>
+          <Link href="/virtual-reality" passHref>
+            Virtual Reality
+          </Link>
+        </RouteActive>
+      </ListItem>
+      <ListItem>
+        <RouteActive active={router.pathname === "/robots"}>
+          <Link href="/robots" passHref>
+            Robots
+          </Link>
+        </RouteActive>
+      </ListItem>
+      <ListItem>
+        <RouteActive active={router.pathname === "/video-games"}>
+          <Link href="/video-games" passHref>
+            Video Games
+          </Link>
+        </RouteActive>
+      </ListItem>
+      <ListItem>
+        <RouteActive active={router.pathname === "/computers"}>
+          <Link href="/computers" passHref>
+            Computers
+          </Link>
+        </RouteActive>
+      </ListItem>
+      <ListItem>
+        <RouteActive active={router.pathname === "/mobiles"}>
+          <Link href="/mobiles" passHref>
+            Mobiles
           </Link>
         </RouteActive>
       </ListItem>
