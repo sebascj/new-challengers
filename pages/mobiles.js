@@ -25,7 +25,7 @@ function Mobiles() {
         <title>Mobiles | New Challengers</title>
       </Head>
       <Layout>
-        <Search category="mobiles" onSearch={onSearch} />
+        <Search category="mobile" onSearch={onSearch} />
         <CardsContainer>
           {items.map((item, index) => {
             return <Card key={`card_${index}`} item={item}></Card>;
