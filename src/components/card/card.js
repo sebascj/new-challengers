@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Router from "next/router";
 
 const CardWrapper = styled.div`
   margin: 8px;
@@ -29,6 +30,7 @@ const Image = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  cursor: pointer;
 `;
 
 const Description = styled.div`
@@ -50,7 +52,13 @@ function Card({ item }) {
   return (
     <CardWrapper>
       <Cropper>
-        <Image src={item.urls.thumb} alt={item.alt_description} />
+        <Image
+          src={item.urls.thumb}
+          alt={item.alt_description}
+          onClick={() => {
+            Router.push(`/details/${item.id}`);
+          }}
+        />
       </Cropper>
       <Divider />
       <Description>{description}</Description>
