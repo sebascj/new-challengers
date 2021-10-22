@@ -3,8 +3,8 @@ import Router from "next/router";
 
 const CardWrapper = styled.div`
   margin: 8px;
-  width: 300px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   padding: 8px;
   display: flex;
   flex-flow: column;
@@ -12,6 +12,7 @@ const CardWrapper = styled.div`
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 16px 16px rgba(0, 0, 0, 0.12);
+  justify-content: center;
 `;
 
 const Cropper = styled.div`
@@ -60,8 +61,6 @@ function Card({ item, size = "thumb" }) {
           }}
         />
       </Cropper>
-      <Divider />
-      <Description>{description}</Description>
     </CardWrapper>
   );
 }
