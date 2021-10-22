@@ -11,8 +11,8 @@ const getDetails = function (id) {
           rawData += chunk;
         })
         .on("end", () => {
-          const body = JSON.parse(rawData);
-          resolve(body);
+          // const body = JSON.parse(rawData);
+          resolve(rawData);
         })
         .on("error", (e) => {
           reject(e);

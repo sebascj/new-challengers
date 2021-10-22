@@ -25,7 +25,7 @@ function Computers() {
         body: JSON.stringify({ id }),
       });
       const data = await searchResult.json();
-      setDetails(data);
+      setDetails(JSON.parse(data));
     } catch (error) {
       console.error(error);
     }
