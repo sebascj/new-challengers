@@ -43,7 +43,7 @@ const Divider = styled.div`
   width: 100%;
 `;
 
-function Card({ item }) {
+function Card({ item, size = "thumb" }) {
   const description =
     item.description && item.description.length > 100
       ? item.description.slice(0, 100) + "..."
@@ -53,7 +53,7 @@ function Card({ item }) {
     <CardWrapper>
       <Cropper>
         <Image
-          src={item.urls.thumb}
+          src={item.urls[size]}
           alt={item.alt_description}
           onClick={() => {
             Router.push(`/details/${item.id}`);
