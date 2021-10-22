@@ -175,7 +175,7 @@ const Navigation = () => {
       <ListItem>
         <RouteActive active={router.pathname === "/mobiles"}>
           <Link href="/mobiles" passHref>
-            Mobiles
+            Mobile
           </Link>
         </RouteActive>
       </ListItem>
